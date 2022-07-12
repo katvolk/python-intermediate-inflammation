@@ -43,7 +43,13 @@ def daily_min(data):
 
 
 def patient_normalise(data):
-    """Normalise patient data from a 2D inflammation data array."""
+    """Normalise patient data from a 2D inflammation data array.
+    :param data: 2D data array (each row contains measurements for a single patient across all days)
+    :raises ValueError: raised if any entries in data are <0
+    :returns: array of minimum values (one per row in data)
+    """
+    if np.any(data < 0):
+        raise ValueError('Inflammation values should not be negative')
     max_data = np.nanmax(data, axis=1)
     with np.errstate(invalid='ignore', divide='ignore'):
         normalised = data / max_data[:, np.newaxis]
