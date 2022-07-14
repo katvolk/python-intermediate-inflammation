@@ -17,6 +17,9 @@ class Observation:
     def __str__(self):
         return str(self.value)
 
+    def __eq__(self,other):
+        return self.day == other.day and self.value == other.value
+
 
 class Person:
     def __init__(self, name):
@@ -28,9 +31,12 @@ class Person:
 
 class Patient(Person):
     """A patient in an inflammation study."""
-    def __init__(self, name):
+    def __init__(self, name, observations=None):
         super().__init__(name)
+
         self.observations = []
+        if observations is not None:
+            self.observations = observations
 
     def add_observation(self, value, day=None):
         if day is None:
@@ -38,9 +44,13 @@ class Patient(Person):
                 day = self.observations[-1].day + 1
             except IndexError:
                 day = 0
-        new_observation = Observation(day, value)
+        new_observation = Observation(value, day)
         self.observations.append(new_observation)
         return new_observation
+
+    def __eq__(self,other):
+        return (self.name == other.name and
+                self.observations == other.observations)
 
 
 class Doctor(Person):

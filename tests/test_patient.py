@@ -58,3 +58,20 @@ def test_add_mulitple_patients():
     d.add_patient(p3)
     assert d.patients is not None
     assert len(d.patients) == 2
+    assert p3==p1
+
+
+def test_compare_patients():
+    """add two patients, re-add first patient to make sure there
+    aren't any duplicates
+    """
+    from inflammation.models import Patient
+
+    p1 = Patient(name='Amy')
+    p1.add_observation([1,2,3,4,5])
+    p2 = Patient(name='Amy')
+    p2.add_observation([1,2,3,4,5])
+    p3 = Patient(name='Amy')
+    p3.add_observation([1,4,5])
+    assert not p3 == p1
+    assert p1 == p2
