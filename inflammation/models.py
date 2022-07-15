@@ -5,6 +5,7 @@ The Model layer is responsible for the 'business logic' part of the software.
 Patients' data is held in an inflammation table (2D array) where each row contains 
 inflammation data for a single patient taken over a number of days 
 and each column represents a single day across all patients.
+Authors: Kat Volk, Daniel Egbo, Markus Hundertmark, and Alessandro Mazzi
 """
 
 import numpy as np
@@ -39,6 +40,11 @@ class Patient(Person):
             self.observations = observations
 
     def add_observation(self, value, day=None):
+        """Add an observation to the patient.
+        
+        :param value: inflammation value for the day
+        :param day: day of the observation, optional
+        :returns: Observation instance with given value and day."""
         if day is None:
             try:
                 day = self.observations[-1].day + 1
@@ -64,6 +70,14 @@ class Doctor(Person):
             if patient.name == new_patient.name:
                 return
         self.patients.append(new_patient)
+    
+    def get_patients(self):
+        """
+        Get a list of patients from the doctor's inflammation study.
+        
+        :returns: The list of patients.
+        """
+        return self.patients
 
 
 def load_csv(filename):
