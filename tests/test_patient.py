@@ -62,8 +62,10 @@ def test_add_mulitple_patients():
 
 
 def test_compare_patients():
-    """add two patients, re-add first patient to make sure there
-    aren't any duplicates
+    """Create 3 patients with the same name
+    one patient is a duplicate, the test ensures
+    that the duplicate is not equal and that the duplicate
+    patient is equal.
     """
     from inflammation.models import Patient
 
