@@ -1,4 +1,6 @@
-"""Tests for statistics functions within the Model layer."""
+"""Tests for statistics functions within the Model layer.
+Authors: Kat Volk, Daniel Egbo, Markus Hundertmark, and Alessandro Mazzi
+"""
 
 import numpy as np
 import numpy.testing as npt

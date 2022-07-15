@@ -1,3 +1,8 @@
+"""
+Tests for the Serializer module.
+Authors: Kat Volk, Daniel Egbo, Markus Hundertmark, and Alessandro Mazzi
+"""
+
 from inflammation import models, serializers
 
 def test_patients_json_serializer():

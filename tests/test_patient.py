@@ -1,4 +1,6 @@
-"""Tests for the Patient model."""
+"""Tests for the Patient model.
+Authors: Kat Volk, Daniel Egbo, Markus Hundertmark, and Alessandro Mazzi
+"""
 
 
 def test_create_patient():

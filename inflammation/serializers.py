@@ -1,3 +1,7 @@
+"""
+Inflam module for serializing patients data
+Authors: Kat Volk, Daniel Egbo, Markus Hundertmark, and Alessandro Mazzi
+"""
 """Module containing serializers for patient and observation data."""
 from inflammation import models
 import json
