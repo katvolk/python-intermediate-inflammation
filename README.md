@@ -1,6 +1,6 @@
 # Inflam
 
-![Continuous Integration build in GitHub Actions](https://github.com/<your_github_username>/python-intermediate-inflammation/workflows/CI/badge.svg?branch=main)
+![Continuous Integration build in GitHub Actions](https://github.com/katvolk/python-intermediate-inflammation/workflows/CI/badge.svg?branch=main)
 
 
 Inflam is a data management system written in Python that manages trial data used in clinical inflammation studies.
@@ -30,4 +30,28 @@ The following optional packages are required to run Inflam's unit tests:
 - Clone the repo ``git clone repo``
 - Install via ``pip install -e .``
 - Check everything runs by running ``pytest`` in the root directory
+
+## Contributing:
+
+Report bugs or describe feature requests by creating an issue [here](https://github.com/katvolk/python-intermediate-inflammation/issues)
+
+If you make changes or develop new code you would like to contribute to the main repository, create a pull requests [here](https://github.com/katvolk/python-intermediate-inflammation/pulls)
+
+## Credits/Acknowledgements: 
+
+The base of this repo was generated from [here](https://github.com/carpentries-incubator/python-intermediate-inflammation).
+Contributors to this repo include 
+[Kat Volk](https://github.com/katvolk),
+[Daniel Egbo](https://github.com/Danselem), 
+[Markus Hundertmark](https://github.com/mpgh), and
+[Alessandro Mazzi](https://github.com/Thalos12).
+
+## Contact information
+
+Kat Volk, kat.volk@gmail.com
+
+## Licence: 
+
+Inflam is released under a GNU General Public License v3.0. 
+Permissions of this strong copyleft license are conditioned on making available complete source code of licensed works and modifications, which include larger works using a licensed work, under the same license. Copyright and license notices must be preserved. Contributors provide an express grant of patent rights.
 

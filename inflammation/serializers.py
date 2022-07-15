@@ -2,11 +2,15 @@
 Inflam module for serializing patients data
 Authors: Kat Volk, Daniel Egbo, Markus Hundertmark, and Alessandro Mazzi
 """
-
+"""Module containing serializers for patient and observation data."""
 from inflammation import models
 import json
 
 class Serializer:
+    """
+    Base class that holds the design that’s shared with all other
+    serializer classes
+    """
     @classmethod
     def serialize(cls, instances):
         raise NotImplementedError
@@ -25,6 +29,7 @@ class Serializer:
 
 
 class ObservationSerializer(Serializer):
+    """Serializer for observations"""
     model = models.Observation
 
     @classmethod
@@ -39,6 +44,7 @@ class ObservationSerializer(Serializer):
         return [cls.model(**d) for d in data]
 
 class PatientSerializer(Serializer):
+    """Serializer for Patients"""
     model = models.Patient
 
     @classmethod
@@ -68,6 +74,7 @@ class PatientSerializer(Serializer):
 
 
 class PatientJSONSerializer(PatientSerializer):
+    """Serializer for Patiens in JSON format"""
     @classmethod
     def save(cls, instances, path):
         with open(path, 'w') as jsonfile:
