@@ -40,6 +40,11 @@ class Patient(Person):
             self.observations = observations
 
     def add_observation(self, value, day=None):
+        """Add an observation to the patient.
+        
+        :param value: inflammation value for the day
+        :param day: day of the observation, optional
+        :returns: Observation instance with given value and day."""
         if day is None:
             try:
                 day = self.observations[-1].day + 1

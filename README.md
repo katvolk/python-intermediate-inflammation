@@ -31,6 +31,7 @@ The following optional packages are required to run Inflam's unit tests:
 - Install via ``pip install -e .``
 - Check everything runs by running ``pytest`` in the root directory
 
+
 ## Contributing:
 
 Report bugs or describe feature requests by creating an issue [here](https://github.com/katvolk/python-intermediate-inflammation/issues)
