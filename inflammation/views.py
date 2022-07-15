@@ -1,4 +1,7 @@
-"""Module containing code for plotting inflammation data."""
+"""Inflam module containing code for plotting inflammation data.
+Inflam serializer for loading data
+Authors: Kat Volk, Daniel Egbo, Markus Hundertmark, and Alessandro Mazzi
+"""
 
 from matplotlib import pyplot as plt
 

@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""Software for managing and analysing patients' inflammation data in our imaginary hospital."""
+"""Software for managing and analysing patients' inflammation data in our imaginary hospital.
+Authors: Kat Volk, Daniel Egbo, Markus Hundertmark, and Alessandro Mazzi
+"""
 
 import argparse
 
