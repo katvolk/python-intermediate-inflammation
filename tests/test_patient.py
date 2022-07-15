@@ -77,3 +77,22 @@ def test_compare_patients():
     p3.add_observation([1,4,5])
     assert not p3 == p1
     assert p1 == p2
+
+
+def test_doctor_get_patients():
+    """Test that getting all doctor's patients works."""
+    from inflammation.models import Doctor, Patient
+    
+    p1 = Patient(name='Anne')
+    p1.add_observation([1,2,3,3,3])
+    p2 = Patient(name='Marcus')
+    p2.add_observation([0,1,2,1,1])
+    
+    doctor = Doctor('Rick')
+    doctor.add_patient(p1)
+    doctor.add_patient(p2)
+    
+    patients = doctor.get_patients()
+    
+    assert patients == [p1,p2]
+    
