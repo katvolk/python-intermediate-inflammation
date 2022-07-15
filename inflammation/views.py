@@ -25,7 +25,11 @@ def visualize(data_dict):
 
 
 def display_patient_record(patient):
-    """Display data for a single patient."""
+    """Display data for a single patient.
+
+    :param patient: model class patient instance
+    :return : None 
+    """
     print(patient.name)
     for obs in patient.observations:
         print(obs.day, obs.value)
