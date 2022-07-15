@@ -64,6 +64,14 @@ class Doctor(Person):
             if patient.name == new_patient.name:
                 return
         self.patients.append(new_patient)
+    
+    def get_patients(self):
+        """
+        Get a list of patients from the doctor's inflammation study.
+        
+        :returns: The list of patients.
+        """
+        return self.patients
 
 
 def load_csv(filename):
